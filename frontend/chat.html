@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat - D-solution</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>D-solution</h1>
+      <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="order.html">Order Service</a></li>
+        <li><button id="langToggle" data-lang="{en: 'FR', fr: 'EN'}">FR</button></li>
+        <li><button id="logoutBtn">Logout</button></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="chat-section">
+      <h2 data-lang="{en: 'Chat Support', fr: 'Support Chat'}">Chat Support</h2>
+      <div id="messagesList"></div>
+      <form id="chatForm">
+        <input type="text" id="messageInput" placeholder="Type your message..." required>
+        <button type="submit" data-lang="{en: 'Send', fr: 'Envoyer'}">Send</button>
+      </form>
+    </section>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>
