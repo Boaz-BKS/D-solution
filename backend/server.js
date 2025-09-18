@@ -79,9 +79,27 @@ app.get('/api/services', async (req, res) => {
    let services = await Service.find();
    if (services.length === 0) {
      services = await Service.insertMany([
-       { name: 'Web Development', description: 'Custom web applications and websites.' },
-       { name: 'Consulting', description: 'Expert advice on digital solutions.' },
-       { name: 'Digital Solutions', description: 'Tailored digital tools and services.' }
+       // For Students
+       { name: 'Internship report crafting', description: 'Polished. Professional. Personalized. Turn your real-world training into a professionally written document that meets academic or industry standards.' },
+       { name: 'Proofreading & Editing', description: 'We check your grammar, fix sentence structure, and format your work according to academic guidelines.' },
+       { name: 'CV & Cover Letter Assistance', description: 'Let us write or enhance your documents to help you stand out for scholarships, internships, and job opportunities.' },
+       { name: 'Application Form Support', description: 'Guidance through online university or scholarship applications, including uploading documents and filling forms correctly.' },
+       { name: 'Assignment & Report Formatting', description: 'We’ll format your documents to look clean, professional, and well-organized.' },
+       { name: 'Presentation Design Support', description: 'Polishing and structuring your PowerPoint slides to make them impactful and professional.' },
+       // For Professionals
+       { name: 'Professional CV Design', description: 'Clean, modern CVs that highlight your skills and experience in a visually appealing format.' },
+       { name: 'Custom Cover Letter Writing', description: 'Personalized cover letters tailored to your target job or role.' },
+       { name: 'Document Digitization & Formatting', description: 'Turn handwritten or scanned documents into editable, formatted digital files.' },
+       { name: 'Email Signature & Profile Assets', description: 'Add a professional touch to your emails with branded digital signatures and banners.' },
+       // For Business Owners
+       { name: 'Business Website Setup', description: 'A simple, clean website with mobile compatibility, contact forms, service lists, and more.' },
+       { name: 'Social Media Page Creation', description: 'We create or upgrade your Facebook, Instagram, or LinkedIn pages with branded visuals and key info.' },
+       { name: 'Google Business Profile Setup', description: 'Show up in Google search results and on Google Maps with a verified business profile.' },
+       { name: 'Logo & Branding Design', description: 'Unique logos, social banners, and business card designs to give your business a consistent identity.' },
+       { name: 'Invoice & Quote Templates', description: 'Professionally designed templates branded with your logo and business info.' },
+       { name: 'Business Email Setup', description: 'Set up custom emails using your domain (like info@yourbusiness.com) via Gmail or Zoho.' },
+       { name: 'Online Store Setup', description: 'Start selling online with basic storefronts on Selar, Paystack, or Gumroad — great for physical or digital products.' },
+       { name: 'Form & Survey Creation', description: 'Need to collect customer info or feedback? We’ll build custom forms using Google Forms or Typeform.' }
      ]);
    }
    res.json(services);

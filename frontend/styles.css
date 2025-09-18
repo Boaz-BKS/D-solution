@@ -11,9 +11,15 @@ body {
 }
 
 header {
-  background: #007bff;
+  background: #015a92;
   color: white;
   padding: 1rem 0;
+}
+
+header img.logo {
+  height: 60px;
+  width: auto;
+  border-radius: 50px;
 }
 
 nav {
@@ -53,8 +59,34 @@ main {
   padding: 0 2rem;
 }
 
-.form-section, .catalog-section, .chat-section {
-  max-width: 600px;
+.hero-section {
+  background-image: url('img/growtika.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 0;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(1, 90, 146, 0.456);
+  z-index: 1;
+}
+
+.hero-section > * {
+  position: relative;
+  z-index: 2;
+}
+
+.form-section, .catalog-section, .chat-section, .services-section {
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -77,19 +109,68 @@ input, select, textarea, button {
 }
 
 button {
-  background: #007bff;
+  background: #015a92;
   color: white;
   border: none;
   cursor: pointer;
 }
 
 button:hover {
-  background: #0056b3;
+  background: #014a7a;
 }
 
 #servicesList {
   display: grid;
   gap: 1rem;
+}
+
+.services-section {
+  margin: 2rem 0;
+}
+
+.collapsible-section {
+  margin-bottom: 1rem;
+}
+
+.collapsible-section summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+.collapsible-section summary::-webkit-details-marker {
+  display: none;
+}
+
+.collapsible-section[open] summary {
+  margin-bottom: 1rem;
+}
+
+.collapsible-content {
+  margin-top: 1rem;
+  padding-left: 1rem;
+  border-left: 2px solid #015a92;
+}
+
+.services-section h3 {
+  margin: 2rem 0 1rem 0;
+  color: #015a92;
+}
+
+.services-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.services-section li {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-left: 4px solid #015a92;
+  border-radius: 4px;
+}
+
+.services-section strong {
+  font-size: 1.1em;
 }
 
 .service-item {
@@ -119,9 +200,36 @@ button:hover {
   border-radius: 4px;
 }
 
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 4rem;
+}
+
+footer .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+footer img {
+  height: 30px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 2rem 0;
+  }
+}
+
 .btn {
   display: inline-block;
-  background: #007bff;
+  background: #015a92;
   color: white;
   padding: 0.75rem 1.5rem;
   text-decoration: none;
